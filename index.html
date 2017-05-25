@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="carTrip">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Car trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js" async defer></script>
+    <script src="http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Baasic bar -->
+        <ul>
+            <li><a href="#" ui-sref="login">Login</a></li>
+            <li><a href="#" ui-sref="register">Register</a></li>
+        </ul>
+        <main>
+            <div ui-view></div>
+        </main>
+    </div>
+    <!-- inject:vendor:js -->
+    <script src="/authentication/bower_components/angular/angular.min.js"></script>
+    <script src="/authentication/bower_components/angular-route/angular-route.js"></script>
+    <script src="/authentication/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/authentication/bower_components/satellizer/dist/satellizer.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/authentication/src/app/config.js"></script>
+    <script src="/authentication/src/app/app.js"></script>
+    <script src="/authentication/src/app/server.js"></script>
+    <script src="/authentication/src/app/view/login/loginController.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

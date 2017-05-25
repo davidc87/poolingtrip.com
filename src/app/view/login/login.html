@@ -1,0 +1,22 @@
+<form name="loginForm">
+    <h2>Login Form</h2>
+    <div class="field">
+        <label for="userName" class="label">Username:</label>
+        <input id="userName" class="input" type="text" ng-model="loginControllerVm.username" required maxlength="30">
+    </div>
+    <div class="field">
+        <label for="password" class="label">Password:</label>
+        <input id="password" class="input" type="password" ng-model="loginControllerVm.password" required maxlength="30">
+    </div>
+    <div class="field">
+        <button type="submit" class="button" ng-click="loginControllerVm.login('google')">Login with Google</button>
+        <button type="submit" class="button" ng-click="loginControllerVm.login('facebook')">Login with Facebook</button>
+    </div>
+    <div class="field">
+        Google user info {{loginControllerVm.googleUserInfo | json}}
+        <br/> Facebook User info {{loginControllerVm.fbUserInfo | json}}
+    </div>
+</form>
+<button type="submit" class="button" ng-click="loginControllerVm.logout()">Logout</button>
+
+<script src="/authentication/src/app/view/login/loginController.js"></script>
